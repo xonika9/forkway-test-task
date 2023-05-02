@@ -21,14 +21,15 @@ export default function Home() {
   const [pages, setPages] = useState(initialPages);
 
   const movePage = (draggedId: number, newParentId: number | null) => {
-    setPages((prevPages) => {
-      return prevPages.map((page) => {
-        if (page.id === draggedId) {
-          return { ...page, parent_id: newParentId };
-        }
-        return page;
-      });
-    });
+    if (draggedId === newParentId) {
+      return;
+    }
+
+    setPages((prevPages) =>
+      prevPages.map((page) =>
+        page.id === draggedId ? { ...page, parent_id: newParentId } : page
+      )
+    );
   };
 
   return (
