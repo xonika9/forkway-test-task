@@ -1,0 +1,30 @@
+.pageTree {
+  padding-left: 20px;
+}
+
+.pageTreeNode {
+  margin-bottom: 10px;
+}
+
+.pageTreeTitle {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  transition: all 0.3s ease;
+
+  user-select: none;
+
+  &:hover {
+    border-color: #ccc;
+    background-color: #f8f9fa;
+  }
+}
+
+.pageTreeChildren {
+  margin-top: 8px;
+  padding-left: 30px;
+}
